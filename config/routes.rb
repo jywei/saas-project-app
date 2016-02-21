@@ -22,6 +22,9 @@ Rails.application.routes.draw do
     :passwords => "milia/passwords",
   }
 
+  match '/plan/edit' => 'tenants#edit', via: :get, as: :edit_plan
+  match '/plan/update' => 'tenants#update', via: [:put, :patch], as: :update_plan
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
